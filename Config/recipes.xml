@@ -1,0 +1,65 @@
+<config>
+	<append xpath="/recipes">
+	
+		<recipe name="plantedAloe1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="resourceCropAloeLeaf" count="5"/>
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedBlueberry1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="foodCropBlueberries" count="5" />
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedChrysanthemum1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedGraceCorn1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedCorn1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="foodCropCorn" count="5"/>
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedCotton1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="resourceCropCottonPlant" count="5"/>
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedGoldenrod1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedPotato1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="foodCropPotato" count="5"/>
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedYucca1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="foodCropYuccaFruit" count="5"/>
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedHop1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="resourceCropHopsFlower" count="5"/>
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedCoffee1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="resourceCropCoffeeBeans" count="5"/>
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+		<recipe name="plantedPumpkin1Underground" count="1" craft_time="1" tags="learnable">
+			<ingredient name="foodCropPumpkin" count="5"/>
+			<ingredient name="foodCropGraceCorn" count="5"/>
+		</recipe>
+
+	</append>
+	
+</config>

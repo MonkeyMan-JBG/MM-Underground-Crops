@@ -1,0 +1,25 @@
+<xml>		
+
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry[@icon='plantedCotton1,plantedGoldenrod1,plantedCoffee1,plantedYucca1,plantedAloe1']/@icon"> plantedCotton1,plantedCotton1Underground,plantedGoldenrod1,plantedGoldenrod1Underground,plantedChrysanthemum1,plantedChrysanthemum1Underground,plantedCoffee1,plantedCoffee1Underground,plantedYucca1,plantedYucca1Underground,plantedAloe1,plantedAloe1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedCotton1']/@item">plantedCotton1,plantedCotton1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedGoldenrod1,plantedChrysanthemum1']/@item">plantedGoldenrod1,plantedGoldenrod1Underground,plantedChrysanthemum1,plantedChrysanthemum1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedCoffee1']/@item">plantedCoffee1,plantedCoffee1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedYucca1']/@item">plantedYucca1,plantedYucca1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedAloe1']/@item">plantedAloe1,plantedAloe1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry[@icon='plantedBlueberry1,plantedPumpkin1,plantedMushroom1,plantedCorn1,plantedPotato1']/@icon">plantedBlueberry1,plantedBlueberry1Underground,plantedHop1,plantedHop1Underground,plantedPumpkin1,plantedPumpkin1Underground,plantedMushroom1,plantedCorn1,plantedCorn1Underground,plantedPotato1,plantedPotato1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedBlueberry1,plantedHop1']/@item">plantedBlueberry1,plantedBlueberry1Underground,plantedHop1,plantedHop1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedPumpkin1']/@item">plantedPumpkin1,plantedPumpkin1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedCorn1']/@item">plantedCorn1,plantedCorn1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedPotato1']/@item">plantedPotato1,plantedPotato1Underground</set>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@level='2,100']/@tags">plantedCotton1,plantedCotton1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@level='4,100']/@tags">plantedChrysanthemum1,plantedChrysanthemum1Underground,plantedGoldenrod1,plantedGoldenrod1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@level='6,100']/@tags">plantedCoffee1,plantedCoffee1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@level='8,100']/@tags">plantedYucca1,plantedYucca1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@level='10,100']/@tags">plantedAloe1,plantedAloe1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@level='12,100']/@tags">plantedBlueberry1,plantedBlueberry1Underground,plantedHop1,plantedHop1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@level='14,100']/@tags">plantedPumpkin1,plantedPumpkin1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@level='18,100']/@tags">plantedCorn1,plantedCorn1Underground</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@level='20,100']/@tags">plantedPotato1,plantedPotato1Underground</set>
+
+</xml>

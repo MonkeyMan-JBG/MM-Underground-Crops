@@ -1,0 +1,7 @@
+<config>
+
+	<append xpath="/items/item[@name='plantedGraceCorn1Schematic']/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedGraceCorn1Underground" operation="set" value="1"/>
+	</append>
+
+</config>

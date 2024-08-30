@@ -1,0 +1,51 @@
+Key,File,Type,english
+
+plantedAloe1Underground,blocks,Farming,Underground Aloe Vera (Seed)
+plantedAloe2Underground,blocks,Farming,Underground Aloe Vera (Growing)
+Aloe3UndergroundHarvestDesc,blocks,Farming,Underground Aloe Vera Plant
+
+plantedBlueberry1Underground,blocks,Farming,Underground Blueberry (Seed)
+plantedBlueberry2Underground,blocks,Farming,Underground Blueberry (Growing)
+Blueberry3UndergroundHarvestDesc,blocks,Farming,Underground Blueberry Plant
+
+plantedCotton1Underground,blocks,Farming,Underground Cotton (Seed)
+plantedCotton2Underground,blocks,Farming,Underground Cotton (Growing)
+Cotton3UndergroundHarvestDesc,blocks,Farming,Underground Cotton Plant
+
+plantedChrysanthemum1Underground,blocks,Farming,Underground Chrysanthemum (Seed)
+plantedChrysanthemum2Underground,blocks,Farming,Underground Chrysanthemum (Growing)
+Chrysanthemum3UndergroundHarvestDesc,blocks,Farming,Underground Chrysanthemum
+
+plantedCoffee1Underground,blocks,Farming,Underground Coffee (Seed)
+plantedCoffee2Underground,blocks,Farming,Underground Coffee (Growing)
+Coffee3UndergroundHarvestDesc,blocks,Farming,Underground Coffee Plant
+
+plantedCorn1Underground,blocks,Farming,Underground Corn (Seed)
+plantedCorn2Underground,blocks,Farming,Underground Corn (Growing)
+Corn3UndergroundHarvestDesc,blocks,Farming,Underground Corn Plant
+
+plantedGoldenrod1Underground,blocks,Farming,Underground Goldenrod (Seed)
+plantedGoldenrod2Underground,blocks,Farming,Underground Goldenrod (Growing)
+Goldenrod3UndergroundHarvestDesc,blocks,Farming,Underground Goldenrod Flower
+
+plantedGraceCorn1Underground,blocks,Farming,Underground Super Corn (Seed)
+plantedGraceCorn2Underground,blocks,Farming,Underground Super Corn (Growing)
+GraceCorn3UndergroundHarvestDesc,blocks,Farming,Underground Super Corn
+
+plantedHop1Underground,blocks,Farming,Underground Hop (Seed)
+plantedHop2Underground,blocks,Farming,Underground Hop (Growing)
+Hop3UndergroundHarvestDesc,blocks,Farming,Underground Hop Plant
+
+plantedPotato1Underground,blocks,Farming,Underground Potato (Seed)
+plantedPotato2Underground,blocks,Farming,Underground Potato (Growing)
+Potato3UndergroundHarvestDesc,blocks,Farming,Underground Potato Plant
+
+plantedPumpkin1Underground,blocks,Farming,Underground Pumpkin (Seed)
+plantedPumpkin2Underground,blocks,Farming,Underground Pumpkin (Growing)
+Pumpkin3UndergroundHarvestDesc,blocks,Farming,Underground Pumpkin Plant
+
+plantedYucca1Underground,blocks,Farming,Underground Yucca (Seed)
+plantedYucca2Underground,blocks,Farming,Underground Yucca (Growing)
+Yucca3UndergroundHarvestDesc,blocks,Farming,Underground Yucca Plant
+
+undergroundPlantDesc,blocks,Farming,"These genetically modified plants can grow underground without sunlight. Plant these seeds on a craftable Farm Plot block to grow plants for you to harvest.\n\nWhen harvested, there is a 50% chance to get a seed back for replanting."

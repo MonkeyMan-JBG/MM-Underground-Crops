@@ -1,0 +1,494 @@
+<config>
+	<append xpath="/blocks">
+
+		<block name="plantedYucca1Underground">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedYucca1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="Material" value="Mcorn"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plant_yucca_sproutPrefab"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedYucca2Underground"/>
+			<drop event="Destroy" name="plantedYucca1Underground" count="1"/>
+		</block>
+
+		<block name="plantedYucca2Underground">
+			<property name="Extends" value="plantedYucca1Underground"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab"/>
+			<property name="PlantGrowing.Next" value="Yucca3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedYucca1Underground" count="1"/>
+		</block>
+
+		<block name="Yucca3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CanPickup" value="false"/>		
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="Yucca3UndergroundHarvestDesc"/>
+			<drop event="Harvest" name="foodCropYuccaFruit" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedYucca1Underground"/>
+			<property name="Material" value="Mcorn"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plant_yucca_harvestPrefab"/>
+		</block>
+
+		<block name="plantedCotton1Underground">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCotton1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantCottonSproutPrefab"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedCotton2Underground"/>
+			<drop event="Destroy" name="plantedCotton1Underground" count="1"/>
+		</block>
+
+		<block name="plantedCotton2Underground">
+			<property name="Extends" value="plantedCotton1Underground"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantCottonGrowthPrefab"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="PlantGrowing.Next" value="Cotton3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedCotton1Underground" count="1"/>
+		</block>
+
+		<block name="Cotton3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantCottonHarvestPrefab"/>
+			<property name="DescriptionKey" value="Cotton3UndergroundHarvestDesc"/>
+			<property name="CanPickup" value="false"/>		
+			<property name="CreativeMode" value="None"/>
+			<drop event="Harvest" name="resourceCropCottonPlant" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedCotton1Underground"/>
+			<property name="Texture" value="363"/>
+		</block>
+
+		<block name="plantedCoffee1Underground">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCoffee1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantCoffee_SproutPrefab"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedCoffee2Underground"/>
+			<property name="CraftingIngredientTime" value="5"/>
+			<drop event="Destroy" name="plantedCoffee1Underground" count="1"/>
+		</block>
+
+		<block name="plantedCoffee2Underground">
+			<property name="Extends" value="plantedCoffee1Underground"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantCoffee_GrowingPrefab"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="PlantGrowing.Next" value="Coffee3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedCoffee1Underground" count="1"/>
+		</block>
+
+		<block name="Coffee3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantCoffeePlant_Prefab"/>
+			<property name="CanPickup" value="false"/>		
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="Coffee3UndergroundHarvestDesc"/>
+			<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedCoffee1Underground"/>
+		</block>
+
+		<block name="plantedGoldenrod1Underground">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedGoldenrod1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="Texture" value="401"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedGoldenrod2Underground"/>
+			<drop event="Destroy" name="plantedGoldenrod1Underground" count="1"/>
+		</block>
+
+		<block name="plantedGoldenrod2Underground">
+			<property name="Extends" value="plantedGoldenrod1Underground"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedGoldenrod1"/>
+			<property name="Texture" value="402"/>
+			<property name="PlantGrowing.Next" value="Goldenrod3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedGoldenrod1Underground" count="1"/>
+		</block>
+
+		<block name="Goldenrod3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CustomIcon" value="plantedGoldenrod3HarvestPlayer"/>
+			<property name="Texture" value="362"/>
+			<property name="CanPickup" value="false"/>		
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="Goldenrod3UndergroundHarvestDesc"/>
+			<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedGoldenrod1Underground"/>
+		</block>
+
+		<block name="plantedAloe1Underground">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedAloe1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="Material" value="Mcorn"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plant_aloe1_Prefab"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedAloe2Underground"/>
+			<drop event="Destroy" name="plantedAloe1Underground" count="1"/>
+		</block>
+
+		<block name="plantedAloe2Underground">
+			<property name="Extends" value="plantedAloe1Underground"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Model" value="Entities/Plants/plant_aloe2_Prefab"/>
+			<property name="PlantGrowing.Next" value="Aloe3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedAloe1Underground" count="1"/>
+		</block>
+
+		<block name="Aloe3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CanPickup" value="false"/>		
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="Aloe3UndergroundHarvestDesc"/>
+			<drop event="Harvest" name="resourceCropAloeLeaf" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedAloe1Underground"/>
+			<property name="Material" value="Mcorn"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
+		</block>
+
+		<block name="plantedBlueberry1Underground">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedBlueberry1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedBlueberry2Underground"/>
+			<drop event="Destroy" name="plantedBlueberry1Underground" count="1"/>
+		</block>
+
+		<block name="plantedBlueberry2Underground">
+			<property name="Extends" value="plantedBlueberry1Underground"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
+			<property name="PlantGrowing.Next" value="Blueberry3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedBlueberry1Underground" count="1"/>
+		</block>
+
+		<block name="Blueberry3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CanPickup" value="false"/>		
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="Blueberry3UndergroundHarvestDesc"/>
+			<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedBlueberry1Underground"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
+		</block>
+
+		<block name="plantedPotato1Underground">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedPotato2Underground"/>
+			<drop event="Destroy" name="plantedPotato1Underground" count="1"/>
+		</block>
+
+		<block name="plantedPotato2Underground">
+			<property name="Extends" value="plantedPotato1Underground"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
+			<property name="PlantGrowing.Next" value="Potato3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedPotato1Underground" count="1"/>
+		</block>
+
+		<block name="Potato3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CanPickup" value="false"/>		
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="Potato3UndergroundHarvestDesc"/>
+			<drop event="Harvest" name="foodCropPotato" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedPotato1Underground"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
+		</block>
+
+		<block name="plantedChrysanthemum1Underground">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedChrysanthemum1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="Texture" value="550"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedChrysanthemum2Underground"/>
+			<drop event="Destroy" name="plantedChrysanthemum1Underground" count="1"/>
+		</block>
+
+		<block name="plantedChrysanthemum2Underground">
+			<property name="Extends" value="plantedChrysanthemum1Underground"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedChrysanthemum1"/>
+			<property name="Texture" value="551"/>
+			<property name="PlantGrowing.Next" value="Chrysanthemum3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedChrysanthemum1Underground" count="1"/>
+		</block>
+
+		<block name="Chrysanthemum3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Texture" value="244"/>
+			<property name="CanPickup" value="false"/>		
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="Chrysanthemum3UndergroundHarvestDesc"/>
+			<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedChrysanthemum1Underground"/>
+		</block>
+
+		<block name="plantedCorn1Underground"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCorn1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="Material" value="Mcorn"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/OutdoorDecor/cornStalkGreenSmallPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+			<property name="Place" value="Door"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedCorn2Underground"/>
+			<drop event="Destroy" name="plantedCorn1Underground" count="1"/>
+		</block>
+
+		<block name="plantedCorn2Underground">
+			<property name="Extends" value="plantedCorn1Underground"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/OutdoorDecor/cornStalkGreenMediumPrefab"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+			<property name="PlantGrowing.Next" value="Corn3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedCorn1Underground" count="1"/>
+		</block>
+
+		<block name="Corn3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CanPickup" value="false"/>		
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="Corn3UndergroundHarvestDesc"/>
+			<drop event="Harvest" name="foodCropCorn" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedCorn1Underground"/>
+			<property name="Material" value="Mcorn"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/OutdoorDecor/cornStalkGreenPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+		</block>
+
+		<block name="plantedGraceCorn1Underground">
+			<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="plantedCorn1"/> 
+			<property name="CustomIconTint" value="#d0a7a7"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="UnlockedBy" value="plantedGraceCorn1Schematic"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="Material" value="Mcorn"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/OutdoorDecor/cornStalkSuperSmallPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+			<property name="Place" value="Door"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedGraceCorn2Underground"/>
+			<drop event="Destroy" name="plantedGraceCorn1Underground" count="1"/>
+		</block>
+
+		<block name="plantedGraceCorn2Underground">
+			<property name="Extends" value="plantedGraceCorn1Underground"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/OutdoorDecor/cornStalkSuperMediumPrefab"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+			<property name="PlantGrowing.Next" value="GraceCorn3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedGraceCorn1Underground" count="1"/>
+		</block>
+
+		<block name="GraceCorn3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="GraceCorn3UndergroundHarvestDesc"/>
+			<property name="CanPickup" value="false"/>		
+			<drop event="Harvest" name="foodCropGraceCorn" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedGraceCorn1Underground"/>
+			<property name="Material" value="Mcorn"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/OutdoorDecor/cornStalkSuperPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+		</block>
+
+		<block name="plantedHop1Underground">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedHop1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantHopsSproutPrefab"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedHop2Underground"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<drop event="Destroy" name="plantedHop1Underground" count="1"/>
+		</block>
+
+		<block name="plantedHop2Underground">
+			<property name="Extends" value="plantedHop1Underground"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantHopsGrowthPrefab"/>
+			<property name="PlantGrowing.Next" value="Hop3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedHop1Underground" count="1"/>
+		</block>
+
+		<block name="Hop3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantHopsHarvestPrefab"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="Hop3UndergroundHarvestDesc"/>
+			<property name="CanPickup" value="false"/>		
+			<drop event="Harvest" name="resourceCropHopsFlower" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedHop1Underground"/>
+		</block>
+
+		<block name="plantedPumpkin1Underground">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedPumpkin1"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="DescriptionKey" value="undergroundPlantDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="craftingSeeds"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="Tags" value="seedSkill"/>
+			<property name="Material" value="Mcorn"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/pumpkinSproutPrefab"/>
+			<property name="PlantGrowing.GrowthRate" value="45.0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="15"/>
+			<property name="PlantGrowing.Next" value="plantedPumpkin2Underground"/>
+			<drop event="Destroy" name="plantedPumpkin1Underground" count="1"/>
+		</block>
+
+		<block name="plantedPumpkin2Underground">
+			<property name="Extends" value="plantedPumpkin1Underground"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Model" value="Entities/Plants/pumpkinGrowthPrefab"/>
+			<property name="PlantGrowing.Next" value="Pumpkin3UndergroundHarvest"/>
+			<drop event="Destroy" name="plantedPumpkin1Underground" count="1"/>
+		</block>
+
+		<block name="Pumpkin3UndergroundHarvest">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="Pumpkin3UndergroundHarvestDesc"/>
+			<drop event="Harvest" name="foodCropPumpkin" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedPumpkin1Underground"/>
+			<property name="Material" value="Mcorn"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/pumpkinHarvestPrefab"/>
+			<drop event="Harvest" name="foodCropPumpkin" count="1" tag="wildCropsHarvest"/>
+			<drop event="Harvest" name="foodCropPumpkin" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		</block>
+
+	</append>
+</config>
