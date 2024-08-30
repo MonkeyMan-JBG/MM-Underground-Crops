@@ -48,4 +48,4 @@ plantedYucca1Underground,blocks,Farming,Underground Yucca (Seed)
 plantedYucca2Underground,blocks,Farming,Underground Yucca (Growing)
 Yucca3UndergroundHarvestDesc,blocks,Farming,Underground Yucca Plant
 
-undergroundPlantDesc,blocks,Farming,"These genetically modified plants can grow underground without sunlight. Plant these seeds on a craftable Farm Plot block to grow plants for you to harvest.\n\nWhen harvested, there is a 50% chance to get a seed back for replanting."
+undergroundPlantDesc,blocks,Farming,"These genetically modified plants can grow underground without sunlight. Plant these seeds on a craftable Farm Plot block to grow plants for you to harvest.\n\nWhen harvested, crops will automatically be replanted with no additional seeds required."
