@@ -1,4 +1,11 @@
 <config>
+
+	<set xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']/property[@name='CreativeMode']/@value">Dev</set> <!-- Added to test changes, remove when done -->
+	<insertBefore xpath="/blocks/block[name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']"> <!-- When crop is harvested, the crop is reseeded instead of being destroyed -->
+		<property name="DowngradeBlock" value="plantedMushroom1"/>
+	</insertBefore>
+	<remove xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']"/> <!-- Removes destroy command when crops are harvested -->
+
 	<append xpath="/blocks">
 
 		<block name="plantedYucca1Underground">
@@ -33,11 +40,14 @@
 			<property name="CanPickup" value="false"/>		
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="Yucca3UndergroundHarvestDesc"/>
-			<drop event="Harvest" name="foodCropYuccaFruit" count="1" tag="cropHarvest"/>
-			<property name="DowngradeBlock" value="plantedYucca1Underground"/>
 			<property name="Material" value="Mcorn"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="Entities/Plants/plant_yucca_harvestPrefab"/>
+			<drop event="Harvest" name="foodCropYuccaFruit" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="foodCropYuccaFruit" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="foodCropYuccaFruit" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedYucca1Underground" count="1" tag="farmerBonusSeed"/>
+			<property name="DowngradeBlock" value="plantedYucca1Underground"/>
 		</block>
 
 		<block name="plantedCotton1Underground">
@@ -75,6 +85,9 @@
 			<property name="CanPickup" value="false"/>		
 			<property name="CreativeMode" value="None"/>
 			<drop event="Harvest" name="resourceCropCottonPlant" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="resourceCropCottonPlant" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="resourceCropCottonPlant" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedCotton1Underground" count="1" tag="farmerBonusSeed"/>			
 			<property name="DowngradeBlock" value="plantedCotton1Underground"/>
 			<property name="Texture" value="363"/>
 		</block>
@@ -114,6 +127,9 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="Coffee3UndergroundHarvestDesc"/>
 			<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="resourceCropCoffeeBeans" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedCoffee1Underground" count="1" tag="farmerBonusSeed"/>
 			<property name="DowngradeBlock" value="plantedCoffee1Underground"/>
 		</block>
 
@@ -151,6 +167,9 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="Goldenrod3UndergroundHarvestDesc"/>
 			<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="resourceCropGoldenrodPlant" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedGoldenrod1Underground" count="1" tag="farmerBonusSeed"/>
 			<property name="DowngradeBlock" value="plantedGoldenrod1Underground"/>
 		</block>
 
@@ -186,11 +205,14 @@
 			<property name="CanPickup" value="false"/>		
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="Aloe3UndergroundHarvestDesc"/>
-			<drop event="Harvest" name="resourceCropAloeLeaf" count="1" tag="cropHarvest"/>
-			<property name="DowngradeBlock" value="plantedAloe1Underground"/>
 			<property name="Material" value="Mcorn"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
+			<drop event="Harvest" name="resourceCropAloeLeaf" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="resourceCropAloeLeaf" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="resourceCropAloeLeaf" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedAloe1Underground" count="1" tag="farmerBonusSeed"/>
+			<property name="DowngradeBlock" value="plantedAloe1Underground"/>
 		</block>
 
 		<block name="plantedBlueberry1Underground">
@@ -225,10 +247,13 @@
 			<property name="CanPickup" value="false"/>		
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="Blueberry3UndergroundHarvestDesc"/>
-			<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
-			<property name="DowngradeBlock" value="plantedBlueberry1Underground"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
+			<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="foodCropBlueberries" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="foodCropBlueberries" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedBlueberry1Underground" count="1" tag="farmerBonusSeed"/>
+			<property name="DowngradeBlock" value="plantedBlueberry1Underground"/>
 		</block>
 
 		<block name="plantedPotato1Underground">
@@ -263,10 +288,13 @@
 			<property name="CanPickup" value="false"/>		
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="Potato3UndergroundHarvestDesc"/>
-			<drop event="Harvest" name="foodCropPotato" count="1" tag="cropHarvest"/>
-			<property name="DowngradeBlock" value="plantedPotato1Underground"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
+			<drop event="Harvest" name="foodCropPotato" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="foodCropPotato" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="foodCropPotato" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedPotato1Underground" count="1" tag="farmerBonusSeed"/>
+			<property name="DowngradeBlock" value="plantedPotato1Underground"/>
 		</block>
 
 		<block name="plantedChrysanthemum1Underground">
@@ -302,6 +330,9 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="Chrysanthemum3UndergroundHarvestDesc"/>
 			<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="resourceCropChrysanthemumPlant" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedChrysanthemum1Underground" count="1" tag="farmerBonusSeed"/>
 			<property name="DowngradeBlock" value="plantedChrysanthemum1Underground"/>
 		</block>
 
@@ -342,13 +373,16 @@
 			<property name="CanPickup" value="false"/>		
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="Corn3UndergroundHarvestDesc"/>
-			<drop event="Harvest" name="foodCropCorn" count="1" tag="cropHarvest"/>
-			<property name="DowngradeBlock" value="plantedCorn1Underground"/>
 			<property name="Material" value="Mcorn"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="Entities/OutdoorDecor/cornStalkGreenPrefab"/>
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="MultiBlockDim" value="1,3,1"/>
+			<drop event="Harvest" name="foodCropCorn" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="foodCropCorn" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="foodCropCorn" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedCorn1Underground" count="1" tag="farmerBonusSeed"/>
+			<property name="DowngradeBlock" value="plantedCorn1Underground"/>
 		</block>
 
 		<block name="plantedGraceCorn1Underground">
@@ -388,13 +422,16 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="GraceCorn3UndergroundHarvestDesc"/>
 			<property name="CanPickup" value="false"/>		
-			<drop event="Harvest" name="foodCropGraceCorn" count="1" tag="cropHarvest"/>
-			<property name="DowngradeBlock" value="plantedGraceCorn1Underground"/>
 			<property name="Material" value="Mcorn"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="Entities/OutdoorDecor/cornStalkSuperPrefab"/>
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="MultiBlockDim" value="1,3,1"/>
+			<drop event="Harvest" name="foodCropGraceCorn" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="foodCropGraceCorn" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="foodCropGraceCorn" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedGraceCorn1Underground" count="1" tag="farmerBonusSeed"/>
+			<property name="DowngradeBlock" value="plantedGraceCorn1Underground"/>
 		</block>
 
 		<block name="plantedHop1Underground">
@@ -435,6 +472,9 @@
 			<property name="DescriptionKey" value="Hop3UndergroundHarvestDesc"/>
 			<property name="CanPickup" value="false"/>		
 			<drop event="Harvest" name="resourceCropHopsFlower" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="resourceCropHopsFlower" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="resourceCropHopsFlower" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedHop1Underground" count="1" tag="farmerBonusSeed"/>
 			<property name="DowngradeBlock" value="plantedHop1Underground"/>
 		</block>
 
@@ -469,14 +509,16 @@
 			<property name="Extends" value="cropsHarvestableMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="Pumpkin3UndergroundHarvestDesc"/>
-			<drop event="Harvest" name="foodCropPumpkin" count="1" tag="cropHarvest"/>
-			<property name="DowngradeBlock" value="plantedPumpkin1Underground"/>
 			<property name="Material" value="Mcorn"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="Entities/Plants/pumpkinHarvestPrefab"/>
-			<drop event="Harvest" name="foodCropPumpkin" count="1" tag="wildCropsHarvest"/>
+			<drop event="Harvest" name="foodCropPumpkin" count="1" tag="cropHarvest"/>
 			<drop event="Harvest" name="foodCropPumpkin" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="foodCropPumpkin" count="1" tag="farmerBonusHarvest"/>
+			<drop event="Harvest" name="plantedPumpkin1Underground" count="1" tag="farmerBonusSeed"/>
+			<property name="DowngradeBlock" value="plantedPumpkin1Underground"/>		
 		</block>
 
 	</append>
+	
 </config>
