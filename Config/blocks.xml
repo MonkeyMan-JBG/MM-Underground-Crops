@@ -1,7 +1,6 @@
 <config>
 
-	<set xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']/property[@name='CreativeMode']/@value">Dev</set> <!-- Added to test changes, remove when done -->
-	<insertBefore xpath="/blocks/block[name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']"> <!-- When crop is harvested, the crop is reseeded instead of being destroyed -->
+	<insertBefore xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']"> <!-- When crop is harvested, the crop is reseeded instead of being destroyed -->
 		<property name="DowngradeBlock" value="plantedMushroom1"/>
 	</insertBefore>
 	<remove xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']"/> <!-- Removes destroy command when crops are harvested -->
